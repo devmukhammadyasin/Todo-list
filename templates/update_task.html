@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update task</title>
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
+
+    <style>
+        body{
+            background: #638CB8;
+        }
+        input{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        input::placeholder{
+            color: #d3d3d3;
+        }
+        input[submit]{
+            background: #6BA3E8
+        }
+        .center-column{
+            width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 3px;
+            margin-top: 100px;
+            padding: 20px;
+            box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 75);
+        }
+        .item-row{
+            background: #906abd;
+            margin: 10px; 
+            padding: 20px;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 16px;
+            box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, 75);
+        }
+        .btn-danger{
+            background: #ffae19;
+            border-color: #e59400;
+        }
+        p{
+            background: grey;
+            color: #000;
+            height: 50px;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 12px;
+        }
+        h3{
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            left: 41%;
+            background: lightblue;
+            border-radius: 15px;
+            width: 250px;
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body> 
+
+    <h3>Update Task</h3>
+
+    <div class="center-column">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form  }}
+
+            <a class="btn-sm btn-danger" href="{% url 'main:list' %}">Cancel</a>
+
+            <input type="submit" name="Update Task" id="" class="btn-info">
+        </form>
+    </div>
+
+</body>
+</html> 
